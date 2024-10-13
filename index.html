@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Momentum</title>
+</head>
+<body>
+<main class="main">
+    <header class="header">
+        <div class="top">
+            <input type="text" id="city" placeholder="Введите город">
+            <button id="getWeather">Получить погоду</button>
+            
+            <h2 id="temperature"></h2>
+            <h3 id="condition"></h3>
+
+            
+        </div>
+    </header>
+
+    
+    <div class="center">
+        <div class="time" id="time"></div>
+
+        <div class="date" id="date"></div>
+    </div>
+
+
+
+    <section class="bottom">
+        <div class="task-container">
+            <h1>Список задач</h1>
+            <input type="text" id="taskInput" placeholder="Введите новую задачу" />
+            <div id="error" class="error-message"></div>
+            <ul id="taskList"></ul>
+            <button id="deleteCompletedBtn">Удалить выполненные задачи</button>
+        </div>
+    </section>
+</main>
+<script src="scripts/script.js"></script>
+</body>
+</html>
