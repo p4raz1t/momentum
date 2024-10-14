@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="https://img.icons8.com/?size=100&id=39854&format=png&color=A1A1A1">
     <link rel="stylesheet" href="styles/style.css">
     <title>Momentum</title>
 </head>
@@ -10,32 +11,39 @@
 <main class="main">
     <header class="header">
         <div class="top">
-            <input type="text" id="city" placeholder="Введите город">
-            <button id="getWeather">Получить погоду</button>
-            
-            <h2 id="temperature"></h2>
-            <h3 id="condition"></h3>
-
-            
+            <ul class="city__ul">
+                <li>
+                    <input type="text" id="city" placeholder="Enter city">
+                </li>
+                <li>
+                    <button id="getWeather">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/></svg>
+                    </button>
+                </li>
+            </ul>           
+            <ul class="temperature__ul">
+                <li>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/></svg>
+                </li>
+                <li><h2 id="temperature"></h2></li>
+                <li><h3 id="condition"></h3></li>
+            </ul>            
         </div>
-    </header>
-
-    
+    </header> 
     <div class="center">
         <div class="time" id="time"></div>
 
         <div class="date" id="date"></div>
     </div>
-
-
-
     <section class="bottom">
-        <div class="task-container">
-            <h1>Список задач</h1>
-            <input type="text" id="taskInput" placeholder="Введите новую задачу" />
+        <div class="task__container">
+            <h1>Tasks list</h1>
+            <input type="text" id="taskInput" placeholder="Enter a new task" />
             <div id="error" class="error-message"></div>
             <ul id="taskList"></ul>
-            <button id="deleteCompletedBtn">Удалить выполненные задачи</button>
+            <button id="deleteCompletedBtn">Delete completed tasks</button>
         </div>
     </section>
 </main>
